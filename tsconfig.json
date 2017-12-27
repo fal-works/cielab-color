@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "declaration": true,
+        "declarationDir": "./types",
+        "allowJs": false,
+        "target": "es2015",
+        "module": "es2015",
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "preserveConstEnums": true,
+        "alwaysStrict": true,
+        "strictNullChecks": true,
+        "noEmitOnError": true,
+        "noUnusedLocals": true,
+    },
+    "files": [
+        "./src/cielab-color.ts"
+    ],
+    "compileOnSave": true
+}
