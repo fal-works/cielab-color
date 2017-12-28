@@ -1,20 +1,33 @@
 import typescript from 'rollup-plugin-typescript2';
 
+const moduleName = 'cielab-color';
+const version = '0.1.1';
+
+const myBanner = `/**
+* @module ${moduleName}
+* @author FAL <falworks.contact@gmail.com>
+* @license MIT
+* @version ${version}
+*/
+`;
+
 export default {
-  input: 'src/cielab-color.ts',
-  output: {
-    file: 'lib/cielab-color.js',
-    format: 'umd',
-    name: 'cielab',
-    sourcemap: false,
-    banner: `/**
- * @module cielab-color
- * @author FAL <falworks.contact@gmail.com>
- * @license MIT
- * @version 0.1.0
- */
-`
-  },
+  input: `src/${moduleName}.ts`,
+  output: [
+    {
+      file: `lib/${moduleName}.js`,
+      format: 'umd',
+      name: moduleName,
+      sourcemap: false,
+      banner: myBanner
+    },
+    {
+      file: `lib/${moduleName}.mjs`,
+      format: 'es',
+      sourcemap: false,
+      banner: myBanner
+    }
+  ],
   plugins: [
     typescript({
       useTsconfigDeclarationDir: true

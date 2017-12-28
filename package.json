@@ -1,8 +1,9 @@
 {
   "name": "cielab-color",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Library for converting CIELAB -> sRGB.",
   "main": "lib/cielab-color.js",
+  "jsnext:main": "lib/cielab-color.mjs",
   "types": "types/cielab-color.d.ts",
   "files": [
     "lib",
@@ -25,7 +26,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rollup -c",
-    "uglify": "uglifyjs ./lib/cielab-color.js --compress --mangle --screw-ie8 --output ./lib/cielab-color.min.js"
+    "build": "npm-run-all rollup uglify:umd uglify:es",
+    "rollup": "rollup -c",
+    "uglify:umd": "uglifyjs ./lib/cielab-color.js --compress --mangle --screw-ie8 --output ./lib/cielab-color.min.js",
+    "uglify:es": "uglifyjs ./lib/cielab-color.mjs --compress --mangle --screw-ie8 --output ./lib/cielab-color.min.mjs"
   }
 }

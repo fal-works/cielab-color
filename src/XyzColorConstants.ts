@@ -2,6 +2,7 @@
  * Matrix for conversion color values from XYZ to linear RGB.
  * Values from "7. Conversion from XYZ (D65) to linear sRGB values" in
  * http://www.color.org/chardata/rgb/sRGB.pdf (April 2015)
+ * @constant {number[][]} xyzToLinearRgbConversionMatrix
  */
 export const xyzToLinearRgbConversionMatrix = [
   [3.2406255, -1.537208, -0.4986286],
@@ -13,6 +14,7 @@ export const xyzToLinearRgbConversionMatrix = [
  * Matrix for converting color values from linear RGB to XYZ.
  * This is an inversed matrix of xyzToLinearRgbConversionMatrix
  * which is pre-calculated by math.js.
+ * @constant {number[][]} linearRgbToXyzConversionMatrix
  */
 export const linearRgbToXyzConversionMatrix = [
   [0.4123999971730992, 0.35760000265100855, 0.18050001435233867],
