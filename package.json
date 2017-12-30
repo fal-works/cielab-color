@@ -1,6 +1,6 @@
 {
   "name": "cielab-color",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Library for converting CIELAB -> sRGB.",
   "main": "lib/cielab-color.js",
   "jsnext:main": "lib/cielab-color.mjs",

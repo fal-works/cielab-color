@@ -1,7 +1,8 @@
 import typescript from 'rollup-plugin-typescript2';
 
 const moduleName = 'cielab-color';
-const version = '0.1.1';
+const umdName = 'cielab';
+const version = '0.1.2';
 
 const myBanner = `/**
 * @module ${moduleName}
@@ -17,7 +18,7 @@ export default {
     {
       file: `lib/${moduleName}.js`,
       format: 'umd',
-      name: moduleName,
+      name: umdName,
       sourcemap: false,
       banner: myBanner
     },
